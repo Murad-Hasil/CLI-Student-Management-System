@@ -17,7 +17,7 @@ let answer = await inquirer.prompt([
   {
     name: "student",
     type: "input",
-    message: chalk.bold.cyan.bgYellowBright("Enter student name : "),
+    message: chalk.bold.yellow("Enter student name : "),
     validate: function (value) {
       if (value.trim() !== "") {
         return true;
@@ -28,7 +28,7 @@ let answer = await inquirer.prompt([
   {
     name: "courses",
     type: "list",
-    message: chalk.bold.cyan.bgYellowBright("Select the course to enrolled : "),
+    message: chalk.bold.yellow("Select the course to enrolled : "),
     choices: [
       "MS.Office",
       "HTML",
@@ -68,7 +68,7 @@ let paymentType = await inquirer.prompt([
   {
     name: "amount",
     type: "input",
-    message: chalk.bold.cyan.bgYellowBright("Transfer Money : "),
+    message: chalk.bold.yellow("Transfer Money : "),
     validate: function (value) {
       if (value.trim() !== "") {
         return true;
@@ -96,7 +96,7 @@ if (paymentAmount === tutionFees) {
     {
       name: "select",
       type: "list",
-      message: chalk.bold.cyan.bgYellowBright(
+      message: chalk.bold.yellow(
         "What would you like to do next?"
       ),
       choices: ["View status", "Exit"],
